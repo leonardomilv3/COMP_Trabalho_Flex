@@ -1,10 +1,8 @@
-/* 
-Gabriel Costa de Oliveira - 190045817 
-Leonardo Milomes Vitoriano - 201000379
-Cicero Barrozo Fernandes Filho - 190085819
-Adne Moretti Moreira - 200013181
+/* Gabriel Costa de Oliveira - 190045817 */
+/* Leonardo Milomes Vitoriano - 201000379 */
+/* Cicero Barrozo Fernandes Filho - 190085819 */
+/* Adne Moretti Moreira - 200013181 */
 
-*/
 %{
     enum { TRITONGO, DITONGO, RESTO, END_OF_FILE };
     int tritongo = 0, ditongo = 0, resto = 0;
