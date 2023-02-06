@@ -21,8 +21,8 @@ resto        {letra}+
 
 %%
 {ws}        { /* Nenhum valor retornado */ }
-{tritongo}  { tritongo++; return TRITONGO;}
-{ditongo}   { ditongo++ ; return DITONGO;}
+{tritongo}  { tritongo++ ; resto++; return TRITONGO;}
+{ditongo}   { ditongo++ ; resto++;  return DITONGO;}
 {resto}     { resto++  ; return RESTO;} 
 <<EOF>>     { return END_OF_FILE; }
 %%
@@ -39,7 +39,7 @@ int main()
         int token = yylex();
         if (token == END_OF_FILE)
         {
-            printf("%d %d %d\n", tritongo, ditongo,tritongo + ditongo + resto);
+            printf("%d %d %d\n", tritongo, ditongo, resto);
             return 0;
         }
     }
